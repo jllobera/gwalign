@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gwalign"
+version = "0.1.0"
+description = "Alignment routines for gravitational-wave signals in the lalsuite.gwsignal format"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "lalsuite"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
